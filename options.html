@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Finance Eye - 设置</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,sans-serif;font-size:14px;color:#c9d1d9;background:#0d1117;max-width:600px;margin:40px auto;padding:0 20px}
+h1{font-size:24px;margin-bottom:24px;color:#58a6ff}
+.section{background:#161b22;border:1px solid #30363d;border-radius:8px;padding:20px;margin-bottom:20px}
+.section h2{font-size:16px;margin-bottom:16px;padding-bottom:8px;border-bottom:1px solid #30363d}
+.field{margin-bottom:14px}
+.field label{display:block;font-weight:600;margin-bottom:4px;font-size:13px}
+.field .hint{font-size:12px;color:#8b949e;margin-bottom:6px}
+.field input,.field select{width:100%;padding:8px 12px;font-size:13px;border:1px solid #30363d;border-radius:6px;background:#0d1117;color:#c9d1d9}
+.field input:focus,.field select:focus{outline:none;border-color:#58a6ff}
+.inline{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+.btn{padding:8px 20px;font-size:14px;font-weight:600;border-radius:6px;cursor:pointer;border:1px solid #30363d;background:#21262d;color:#c9d1d9}
+.btn-primary{background:#238636;color:#fff;border-color:#238636}
+.btn-primary:hover{background:#2ea043}
+.btn-primary:disabled{opacity:0.65}
+#save-status{margin-left:12px;font-size:13px;color:#3fb950;display:none}
+</style>
+</head>
+<body>
+<h1>📊 Finance Eye <span style="font-size:14px;color:#8b949e">设置</span></h1>
+
+<div class="section">
+  <h2>API配置</h2>
+  <div class="field">
+    <label>金十数据 API Key</label>
+    <div class="hint">从金十数据开放平台获取</div>
+    <input type="password" id="jinshi-key" placeholder="sk-..." autocomplete="off">
+  </div>
+</div>
+
+<div class="section">
+  <h2>盯盘设置</h2>
+  <div class="field">
+    <label>关注品种（逗号分隔）</label>
+    <input type="text" id="watch-list" placeholder="上证指数,黄金,原油">
+  </div>
+  <div class="field">
+    <label>预警阈值 (%)</label>
+    <input type="number" id="alert-threshold" min="0.1" max="20" step="0.1" value="2">
+  </div>
+  <div class="field">
+    <label>刷新间隔 (分钟)</label>
+    <select id="refresh-interval">
+      <option value="1">1 分钟</option>
+      <option value="5" selected>5 分钟</option>
+      <option value="15">15 分钟</option>
+      <option value="30">30 分钟</option>
+    </select>
+  </div>
+</div>
+
+<div class="section">
+  <div style="display:flex;gap:8px">
+    <button class="btn btn-primary" id="save-settings">保存设置</button>
+    <span id="save-status"></span>
+  </div>
+</div>
+
+<script src="options.js"></script>
+</body>
+</html>

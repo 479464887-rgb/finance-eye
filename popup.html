@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Finance Eye</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,sans-serif;font-size:13px;color:#c9d1d9;background:#0d1117;width:340px;padding:16px}
+.header{display:flex;align-items:center;gap:8px;margin-bottom:12px}
+.header h1{font-size:15px;font-weight:600;color:#58a6ff}
+.badge{font-size:9px;font-weight:600;color:#fff;background:#daa520;padding:1px 6px;border-radius:8px}
+.section{margin-bottom:12px}
+.section-title{font-size:11px;font-weight:600;color:#8b949e;text-transform:uppercase;margin-bottom:6px}
+.quote{display:flex;justify-content:space-between;align-items:center;padding:10px 12px;margin-bottom:4px;background:#161b22;border:1px solid #30363d;border-radius:6px}
+.quote-name{font-weight:600;font-size:14px}
+.quote-price{font-size:16px;font-weight:700}
+.up{color:#3fb950} .down{color:#f85149}
+.alert-item{padding:8px 12px;margin-bottom:4px;background:#161b22;border-left:3px solid #f85149;border-radius:4px;font-size:12px}
+.btn{display:block;width:100%;padding:8px;text-align:center;font-size:13px;font-weight:600;border:1px solid #30363d;border-radius:6px;cursor:pointer;background:#21262d;color:#c9d1d9;margin-bottom:6px}
+.btn:hover{background:#30363d}
+.footer{padding-top:10px;border-top:1px solid #30363d;font-size:11px;color:#8b949e;display:flex;justify-content:space-between}
+.footer a{color:#58a6ff;text-decoration:none}
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>📊 Finance Eye</h1>
+  <span class="badge">BETA</span>
+</div>
+
+<div class="section">
+  <div class="section-title">实时行情</div>
+  <div id="quotes-container">加载中...</div>
+</div>
+
+<div class="section">
+  <div class="section-title">最近预警</div>
+  <div id="alerts-container">暂无预警</div>
+</div>
+
+<button class="btn" id="refresh-btn">🔄 刷新行情</button>
+<button class="btn" id="settings-btn">⚙️ 设置</button>
+
+<div class="footer">
+  <span>Finance Eye v1.0</span>
+  <a href="#" id="clear-alerts">清除预警</a>
+</div>
+
+<script src="popup.js"></script>
+</body>
+</html>

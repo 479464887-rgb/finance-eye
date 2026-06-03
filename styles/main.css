@@ -1,0 +1,187 @@
+/* CodeLens AI - Styles */
+
+/* ==================== Panel ==================== */
+#codelens-panel {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #24292f;
+  background: #ffffff;
+  border: 1px solid #d0d7de;
+  border-radius: 6px;
+  margin: 16px 0;
+  padding: 0;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+}
+
+#codelens-panel .codelens-header {
+  background: #f6f8fa;
+  padding: 10px 14px;
+  border-bottom: 1px solid #d0d7de;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+#codelens-panel .codelens-badge {
+  font-size: 10px;
+  font-weight: 600;
+  color: #ffffff;
+  background: #4078c0;
+  padding: 1px 6px;
+  border-radius: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+#codelens-panel .codelens-body {
+  padding: 12px 14px;
+}
+
+#codelens-panel .codelens-footer {
+  padding: 8px 14px;
+  border-top: 1px solid #d0d7de;
+  font-size: 12px;
+  color: #656d76;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f6f8fa;
+}
+
+/* ==================== Analysis Button ==================== */
+#codelens-analyze-btn {
+  width: 100%;
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #2da44e;
+  border: 1px solid rgba(27,31,36,0.15);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+#codelens-analyze-btn:hover:not(:disabled) {
+  background-color: #2c974b;
+}
+
+#codelens-analyze-btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+/* ==================== Analysis Results ==================== */
+#codelens-result {
+  margin-top: 12px;
+  max-height: 500px;
+  overflow-y: auto;
+  padding: 10px;
+  background: #f6f8fa;
+  border-radius: 6px;
+  border: 1px solid #d0d7de;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+#codelens-result h4 {
+  margin: 12px 0 6px;
+  font-size: 13px;
+  color: #24292f;
+  border-bottom: 1px solid #d0d7de;
+  padding-bottom: 4px;
+}
+
+#codelens-result h4:first-child {
+  margin-top: 0;
+}
+
+#codelens-result li {
+  margin: 3px 0;
+  padding-left: 4px;
+}
+
+#codelens-result pre {
+  background: #1b1f23;
+  color: #e6e6e6;
+  padding: 8px 12px;
+  border-radius: 4px;
+  overflow-x: auto;
+  font-size: 11px;
+  line-height: 1.4;
+  margin: 8px 0;
+}
+
+#codelens-result code {
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+}
+
+/* ==================== Settings Link ==================== */
+#codelens-settings-link {
+  color: #0969da;
+  text-decoration: none;
+}
+
+#codelens-settings-link:hover {
+  text-decoration: underline;
+}
+
+/* ==================== Status ==================== */
+#codelens-status {
+  font-size: 11px;
+  color: #656d76;
+}
+
+/* ==================== Dark Mode (GitHub Dark) ==================== */
+@media (prefers-color-scheme: dark) {
+  #codelens-panel {
+    color: #c9d1d9;
+    background: #0d1117;
+    border-color: #30363d;
+  }
+
+  #codelens-panel .codelens-header {
+    background: #161b22;
+    border-bottom-color: #30363d;
+  }
+
+  #codelens-panel .codelens-footer {
+    background: #161b22;
+    border-top-color: #30363d;
+    color: #8b949e;
+  }
+
+  #codelens-panel .codelens-badge {
+    background: #58a6ff;
+  }
+
+  #codelens-analyze-btn {
+    background-color: #238636;
+    border-color: rgba(240,246,252,0.1);
+  }
+
+  #codelens-analyze-btn:hover:not(:disabled) {
+    background-color: #2ea043;
+  }
+
+  #codelens-result {
+    background: #161b22;
+    border-color: #30363d;
+  }
+
+  #codelens-result h4 {
+    color: #c9d1d9;
+    border-bottom-color: #30363d;
+  }
+
+  #codelens-settings-link {
+    color: #58a6ff;
+  }
+
+  #codelens-limit-msg {
+    color: #e36209;
+  }
+}

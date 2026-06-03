@@ -1,0 +1,22 @@
+{
+  "appName": {
+    "message": "CodeLens AI",
+    "description": "Extension name"
+  },
+  "appDesc": {
+    "message": "AI-powered code review assistant for GitHub Pull Requests",
+    "description": "Extension description"
+  },
+  "analyzeBtn": {
+    "message": "Analyze this PR",
+    "description": "Button label for starting analysis"
+  },
+  "dailyLimitReached": {
+    "message": "Daily free analysis limit reached. Upgrade to Pro for unlimited analyses.",
+    "description": "Message when daily limit is hit"
+  },
+  "noApiKey": {
+    "message": "Please set your API key in Settings first.",
+    "description": "Message when API key is not configured"
+  }
+}

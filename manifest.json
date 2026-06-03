@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "Finance Eye",
+  "version": "1.0.0",
+  "description": "实时金融行情助手 — A股/外汇/商品盯盘与预警，基于金十数据",
+  "homepage_url": "https://479464887-rgb.github.io/finance-eye/",
+  "author": {"email": "tulv202900@163.com"},
+  "permissions": ["storage", "alarms", "notifications"],
+  "host_permissions": [
+    "https://api.jinshijijin.com/*",
+    "https://open-data.jinshijijin.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    },
+    "default_title": "Finance Eye"
+  },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
