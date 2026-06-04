@@ -1,3 +1,8 @@
+// ExtPay - Payment integration
+importScripts('ExtPay.js');
+const extpay = ExtPay('finance-eye');
+extpay.startBackground();
+
 // Finance Eye - Background Service Worker
 // 实时行情抓取 + 价格预警
 
@@ -124,9 +129,33 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     case 'GET_QUOTES':
       chrome.storage.local.get(['currentQuotes', 'alerts']).then(sendResponse);
       return true;
+  case 'GET_PAID_STATUS':
+    extpay.getUser().then(sendResponse);
+    return true;
+  case 'OPEN_PAYMENT':
+    extpay.openPaymentPage();
+    sendResponse({ success: true });
+    return false;
+  case 'OPEN_LOGIN':
+    extpay.openLoginPage();
+    sendResponse({ success: true });
+    return false;
+
     case 'GET_SETTINGS':
       chrome.storage.sync.get('settings').then(sendResponse);
       return true;
+  case 'GET_PAID_STATUS':
+    extpay.getUser().then(sendResponse);
+    return true;
+  case 'OPEN_PAYMENT':
+    extpay.openPaymentPage();
+    sendResponse({ success: true });
+    return false;
+  case 'OPEN_LOGIN':
+    extpay.openLoginPage();
+    sendResponse({ success: true });
+    return false;
+
     case 'SAVE_SETTINGS':
       chrome.storage.sync.set({ settings: request.settings }).then(() => {
         startPolling();
