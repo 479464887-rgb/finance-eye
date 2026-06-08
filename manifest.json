@@ -1,5 +1,6 @@
 {
   "manifest_version": 3,
+  "minimum_chrome_version": "88",
   "name": "Finance Eye",
   "version": "1.0.0",
   "description": "实时金融行情助手 — A股/外汇/商品盯盘与预警，基于金十数据",
